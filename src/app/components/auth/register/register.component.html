@@ -1,1 +1,30 @@
-<p>register works!</p>
+<div class="container">
+    <mat-card>
+      <mat-card-title>Registration</mat-card-title>
+      <form [formGroup]="registerForm" (ngSubmit)="onSignUp()">
+        <mat-form-field appearance="fill">
+          <mat-label> Email </mat-label>
+          <input type="text" matInput formControlName="email"/>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label> Password </mat-label>
+          <input type="password" matInput formControlName="password"/>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label> Confirm password </mat-label>
+          <input type="password" matInput formControlName="confirmPassword"/>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label> Country </mat-label>
+          <input type="text" matInput formControlName="country"/>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label> Date of birth </mat-label>
+          <input type="date" matInput formControlName="dateOfBirth"/>
+        </mat-form-field>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" type="submit">Submit</button>
+        </mat-card-actions>
+      </form>
+    </mat-card>
+</div>
