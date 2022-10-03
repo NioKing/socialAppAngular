@@ -6,8 +6,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { NavbarComponent } from './components/app/navbar/navbar.component';
-import { RegisterComponent } from './components/auth/register/register.component';
-import { LoginComponent } from './components/auth/login/login.component';
 import { EntryPageComponent } from './components/entry-page/entry-page.component';
 import { MainComponent } from './components/app/main/main.component';
 import { GraphQLModule } from './graphql.module';
@@ -19,9 +17,6 @@ import { LoginInterceptor } from './components/auth/login/login.interceptor';
   declarations: [
     AppComponent,
     NavbarComponent,
-    RegisterComponent,
-    LoginComponent,
-    EntryPageComponent,
     MainComponent
   ],
   imports: [

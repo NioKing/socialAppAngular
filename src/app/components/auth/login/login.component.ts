@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { catchError, of } from 'rxjs';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -19,6 +20,8 @@ export class LoginComponent implements OnInit {
     email: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required])
   })  
+
+  loginError: string = ''
 
   ngOnInit(): void {
   }
