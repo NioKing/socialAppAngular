@@ -11,8 +11,9 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { EntryPageComponent } from './components/entry-page/entry-page.component';
 import { MainComponent } from './components/app/main/main.component';
 import { GraphQLModule } from './graphql.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginInterceptor } from './components/auth/login/login.interceptor';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoginInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
