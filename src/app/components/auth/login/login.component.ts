@@ -21,7 +21,6 @@ export class LoginComponent implements OnInit {
     password: new FormControl('', [Validators.required])
   })  
 
-  loginError: string = ''
 
   ngOnInit(): void {
   }
