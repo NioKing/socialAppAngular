@@ -10,7 +10,7 @@ const routes: Routes = [
   loadChildren: () => import('./components/auth/login/login.module').then(m => m.LoginModule
     ), canActivate: [IsAuthGuard]},
   {path: 'register', loadChildren: () => import('./components/auth/register/register.module').then(m => m.RegisterModule), canActivate: [IsAuthGuard]},
-  {path: 'home', component: MainComponent, canActivate: [LoginGuard]}
+  {path: 'home',loadChildren: () => import('./components/app/main/main.module').then(m => m.MainPageModule), canActivate: [LoginGuard]}
 ];
 
 @NgModule({

@@ -23,7 +23,7 @@
           <input type="date" matInput formControlName="dateOfBirth"/>
         </mat-form-field>
         <mat-card-actions>
-          <button mat-raised-button color="primary" type="submit">Submit</button>
+          <button mat-raised-button color="primary" [disabled]="registerForm.invalid" type="submit">Submit</button>
         </mat-card-actions>
       </form>
     </mat-card>

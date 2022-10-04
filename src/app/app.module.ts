@@ -16,8 +16,6 @@ import { LoginInterceptor } from './components/auth/login/login.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    MainComponent
   ],
   imports: [
     BrowserModule,
