@@ -27,10 +27,11 @@ export class LoginComponent implements OnInit {
 
   onLogin() {
     let {email, password} = this.loginForm.value
-    this.authService.signIn(email!, password!).subscribe((val: any) => {
-      let token = val.data?.login?.access_token
+    this.authService.signIn(email!, password!).subscribe(async(val: any) => {
+      let token = await val.data?.login?.access_token
       if(token) {
         localStorage.setItem('token_id', token)
+        this.router.navigate(['home'])
       }
     })
   }
