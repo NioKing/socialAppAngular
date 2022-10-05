@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
+import { LoadingService } from '../services/loading.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private readonly authService: AuthService
+    private readonly authService: AuthService,
+    public loadindService: LoadingService
   ) { }
 
   loginForm = new FormGroup({

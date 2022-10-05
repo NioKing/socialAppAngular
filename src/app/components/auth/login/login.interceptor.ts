@@ -5,15 +5,19 @@ import {
   HttpEvent,
   HttpInterceptor
 } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { finalize, Observable } from 'rxjs';
+import { LoadingService } from '../services/loading.service';
 
 @Injectable()
 export class LoginInterceptor implements HttpInterceptor {
 
-  constructor() {}
+  constructor(
+    public loadingService: LoadingService
+  ) {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     const token_id = localStorage.getItem("token_id")
+    this.loadingService.isLoading.next(true)
     if(token_id) {
       const clone = request.clone({
         setHeaders: {
@@ -22,7 +26,9 @@ export class LoginInterceptor implements HttpInterceptor {
       })
       return next.handle(clone)
     } else {
-      return next.handle(request);
+      return next.handle(request).pipe(finalize(() => {
+        this.loadingService.isLoading.next(false)
+      }))
     }
   }
 }
