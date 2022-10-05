@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { Apollo } from 'apollo-angular';
 import { tap } from 'rxjs';
 import { User } from 'src/app/interfaces/user.interface';
-import { USER_LOGIN } from 'src/graphql/login.query';
-import { SIGNUP_USER } from 'src/graphql/register.mutation';
+import { USER_LOGIN } from 'src/app/graphql/login.query';
+import { SIGNUP_USER } from 'src/app/graphql/register.mutation';
 
 @Injectable({
   providedIn: 'root'
