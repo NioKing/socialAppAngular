@@ -36,5 +36,9 @@ export class LoginComponent implements OnInit {
       }
     })
   }
+
+  singUp() {
+    this.router.navigate(['register'])
+  }
   
 }
