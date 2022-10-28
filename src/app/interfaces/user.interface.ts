@@ -5,7 +5,7 @@ import { Post } from "./post.interface";
 export interface User {
     id: number;
     email: string;
-    password: string;
+    password?: string;
     country: string;
     date_of_birth: string;
     posts?: [
@@ -17,7 +17,7 @@ export interface User {
     user_likes?: [
         Like
     ];
-    user_friends?: [
+    friends?: [
         Friendship
     ]
 }

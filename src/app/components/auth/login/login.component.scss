@@ -29,5 +29,8 @@
   mat-hint {
     cursor: pointer;
     font-size: 0.75rem;
+    &:hover{
+      color: rgb(122, 122, 194)
+    }
   }
 }
