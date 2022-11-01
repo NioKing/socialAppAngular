@@ -1,6 +1,9 @@
 <app-navbar [user]="this.user"></app-navbar>
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, odit?</p>
-<p>{{user?.id}}</p>
-<mat-list *ngFor="let post of user?.posts">
-    <mat-list-item>{{post.written_text}}</mat-list-item>
-</mat-list>
+<div class="container">
+    <app-side-bar></app-side-bar>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, odit?</p>
+    <p>{{user?.id}}</p>
+    <mat-list *ngFor="let post of user?.posts">
+        <mat-list-item>{{post.written_text}}</mat-list-item>
+    </mat-list>
+</div>

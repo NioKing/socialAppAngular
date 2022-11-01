@@ -1,0 +1,32 @@
+.container {
+    width: 210px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    mat-sidenav-container {
+        height: 100%;
+        width: 100%;
+        mat-sidenav {
+            padding: 16px;
+            width: 210px;
+            mat-nav-list {
+                display: flex;
+                flex-direction: column;
+                font-size: 1.08rem;
+                .side-list {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    cursor: pointer;
+                    span {
+                        padding: 7px;
+                    }
+                }
+            }
+        }
+        mat-sidenav-content {
+            padding: 16px;
+        }
+    }
+}
