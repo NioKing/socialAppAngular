@@ -6,11 +6,13 @@ import { MainComponent } from './main.component';
 import { MainPageRoutingModule } from './main-routing.module';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { SideBarComponent } from '../side-bar/side-bar.component';
+import { PostComponent } from '../post/post.component';
+import { CommentComponent } from '../comment/comment.component';
 
 
 
 @NgModule({
-    declarations: [MainComponent, NavbarComponent, SideBarComponent],
+    declarations: [MainComponent, NavbarComponent, SideBarComponent, PostComponent, CommentComponent],
     imports: [
         CommonModule,
         SharedModule,

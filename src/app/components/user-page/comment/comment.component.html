@@ -1,0 +1,26 @@
+ <div class="comment">
+      <mat-accordion>
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title> Comments </mat-panel-title>
+          </mat-expansion-panel-header>
+          <!-- <ng-template *ngFor="let comment of post?.comments">
+            <p>{{ comment?.comment_text }}</p>
+            <span>{{ comment?.created_time }}</span>
+          </ng-template> -->
+          <div class="comment-input">
+            <form>
+              <mat-form-field>
+                <textarea
+                  matInput
+                  placeholder="Enter your comment..."
+                ></textarea>
+              </mat-form-field>
+              <button type="submit" mat-raised-button color="primary">
+                Comment
+              </button>
+            </form>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
