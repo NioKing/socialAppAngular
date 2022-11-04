@@ -11,6 +11,19 @@ query {
       id
       written_text
       created_at
+      likes {
+        id
+        post_id
+        profile_id
+        created_time
+      }
+      comments {
+        id
+        post_id
+        profile_id
+        comment_text
+        created_time
+      }
     }
     friends {
       id

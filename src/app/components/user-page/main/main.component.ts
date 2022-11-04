@@ -15,6 +15,7 @@ export class MainComponent implements OnInit {
   ) { }
 
   user!: User
+  panelOpenState: boolean = false
 
   ngOnInit(): void {
     this.getUserData()
