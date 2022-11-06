@@ -1,22 +1,37 @@
-    .comment {
+.comment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .comment-input {
+    form {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      .comment-input {
-        form {
-          display: flex;
-          flex-direction: column;
+    }
+  }
+  mat-accordion {
+    width: 100%;
+    text-align: center;
+    mat-expansion-panel {
+      .comment-body {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .date {
+          align-self: flex-end;
+          font-size: 0.75rem;
         }
       }
-      mat-accordion {
+      mat-expansion-panel-header {
         width: 100%;
-        text-align: center;
-        mat-expansion-panel-header {
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          font-size: 1.1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.1rem;
+        mat-panel-title {
+          margin: 0;
+          padding: 10px;
         }
       }
     }
+  }
+}
