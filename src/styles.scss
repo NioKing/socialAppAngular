@@ -1,17 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
-/* Scrollbar styles */ 
+/* Scrollbar styles */
 
 /* width */
 ::-webkit-scrollbar {
@@ -20,17 +26,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px #424242; 
+  box-shadow: inset 0 0 5px #424242;
   border-radius: 4px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #7b1fa2; 
+  background: #7b1fa2;
   border-radius: 10px;
+  box-shadow: 0px 3px 1px 0px rgb(0 0 0 / 20%),
+  0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #571772; 
+  background: #571772;
 }
