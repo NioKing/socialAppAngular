@@ -1,0 +1,10 @@
+.like {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+  align-items: center;
+  gap: 5px;
+  mat-icon {
+    cursor: pointer;
+  }
+}

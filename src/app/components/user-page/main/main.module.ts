@@ -8,11 +8,12 @@ import { NavbarComponent } from '../navbar/navbar.component';
 import { SideBarComponent } from '../side-bar/side-bar.component';
 import { PostComponent } from '../post/post.component';
 import { CommentComponent } from '../comment/comment.component';
+import { LikeComponent } from '../like/like.component';
 
 
 
 @NgModule({
-    declarations: [MainComponent, NavbarComponent, SideBarComponent, PostComponent, CommentComponent],
+    declarations: [MainComponent, NavbarComponent, SideBarComponent, PostComponent, CommentComponent, LikeComponent],
     imports: [
         CommonModule,
         SharedModule,
