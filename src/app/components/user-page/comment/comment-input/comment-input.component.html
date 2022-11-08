@@ -1,0 +1,8 @@
+<div class="comment-input">
+  <form (ngSubmit)="onComment()" [formGroup]="commentForm">
+    <mat-form-field>
+      <textarea formControlName="text" matInput placeholder="Enter your comment..."></textarea>
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary" [disabled]="commentForm.invalid">Comment</button>
+  </form>
+</div>
