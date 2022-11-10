@@ -11,7 +11,7 @@ export class CommentInputComponent implements OnInit {
   constructor() { }
 
   commentForm = new FormGroup({
-    text: new FormControl('', [Validators.required, Validators.minLength(10)])
+    text: new FormControl('', [Validators.required, Validators.maxLength(500)])
   })
 
   ngOnInit() {

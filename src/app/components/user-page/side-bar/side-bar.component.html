@@ -2,6 +2,10 @@
 <mat-sidenav-container>
     <mat-sidenav opened mode="side">
         <mat-nav-list>
+            <div class="side-list" (click)="getClick()">
+                <mat-icon>post_add</mat-icon>
+                <span>Create new post</span>
+            </div>
             <div class="side-list">
                 <mat-icon>group</mat-icon>
                 <span>Friends</span>
