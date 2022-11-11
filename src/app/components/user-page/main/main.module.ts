@@ -10,11 +10,12 @@ import { PostComponent } from '../post/post.component';
 import { CommentComponent } from '../comment/comment.component';
 import { LikeComponent } from '../like/like.component';
 import { CommentInputComponent } from '../comment/comment-input/comment-input.component';
+import { CreatePostComponent } from '../post/create-post/create-post.component';
 
 
 
 @NgModule({
-    declarations: [MainComponent, NavbarComponent, SideBarComponent, PostComponent, CommentComponent, LikeComponent, CommentInputComponent],
+    declarations: [MainComponent, NavbarComponent, SideBarComponent, PostComponent, CommentComponent, LikeComponent, CommentInputComponent, CreatePostComponent],
     imports: [
         CommonModule,
         SharedModule,

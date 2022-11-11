@@ -1,3 +1,14 @@
-<p>
-  create-post works!
-</p>
+<div class="comment-input">
+  <form (ngSubmit)="onSubmit()" [formGroup]="postForm">
+    <mat-form-field>
+      <textarea
+        formControlName="text"
+        matInput
+        placeholder="Enter post text..."
+        rows="3"
+        formControlName="text"
+      ></textarea>
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary">Submit</button>
+  </form>
+</div>
