@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { FriendsComponent } from '../friends/friends.component';
 import { DataService } from '../services/data.service';
+import { SettingsComponent } from '../settings/settings.component';
 
 @Component({
   selector: 'app-side-bar',
@@ -9,7 +12,8 @@ import { DataService } from '../services/data.service';
 export class SideBarComponent implements OnInit {
 
   constructor(
-    private dataService: DataService
+    private dataService: DataService,
+    private dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -17,5 +21,17 @@ export class SideBarComponent implements OnInit {
 
   getClick() {
     this.dataService.sendClickEvent()
+  }
+
+  getFriends() {
+    this.dialog.open(FriendsComponent, {
+      width: '500px'
+    })
+  }
+
+  getSettings() {
+    this.dialog.open(SettingsComponent, {
+      width: '500px'
+    })
   }
 }

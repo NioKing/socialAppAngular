@@ -6,11 +6,11 @@
                 <mat-icon>post_add</mat-icon>
                 <span>Create new post</span>
             </div>
-            <div class="side-list">
-                <mat-icon>group</mat-icon>
+            <div class="side-list" (click)="getFriends()">
+                <mat-icon matBadge="0">group</mat-icon>
                 <span>Friends</span>
             </div>
-            <div class="side-list">
+            <div class="side-list" (click)="getSettings()">
                 <mat-icon>settings</mat-icon>
                 <span>Manage account</span>
             </div>
