@@ -32,7 +32,7 @@ export class DataService {
           written_text: text
         }
       }
-    ).subscribe()
+    )
   }
 
   sendClickEvent() {
