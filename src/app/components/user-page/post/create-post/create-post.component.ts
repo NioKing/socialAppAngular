@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-create-post',
@@ -8,7 +9,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class CreatePostComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private dataService: DataService
+  ) { }
 
   postForm = new FormGroup({
     text: new FormControl('', [Validators.required])
@@ -18,7 +21,8 @@ export class CreatePostComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.postForm.value.text)
+    const text = String(this.postForm.value.text)
+    this.dataService.createPost(text)
   }
 
 }

@@ -34,7 +34,8 @@ export class PostComponent implements OnInit, OnDestroy {
     this.dialog.open(CreatePostComponent, {
       width: '500px'
     })
-
+    console.log(this.user.posts)
+    
 
   }
 
