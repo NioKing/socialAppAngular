@@ -5,7 +5,7 @@ export interface Post {
     profile_id: number;
     written_text: string;
     media_url?: string;
-    created_at: Date,
+    created_at: string,
     comments?: [
         Comment
     ],

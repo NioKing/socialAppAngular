@@ -1,77 +1,14 @@
-<div class="post-card" *ngFor="let post of user?.posts">
-  <mat-card>
-    <div class="post-text">
-      <span>
-        {{post.written_text}}
-      </span>
-    </div>
-    <app-comment></app-comment>
-    <app-like></app-like>
-  </mat-card>
+<div class="container">
+  <div class="post-card" *ngFor="let post of posts$ | async">
+    <mat-card>
+      <div class="post-text">
+        <span>
+          {{post.written_text}}
+        </span>
+      </div>
+      <app-comment></app-comment>
+      <app-like></app-like>
+    </mat-card>
+  </div>
 </div>
-<div class="post-card">
-  <mat-card>
-    <div class="post-text">
-      <span>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo quasi repellendus natus perspiciatis hic adipisci fugiat deserunt reiciendis est, consequatur facilis illum similique, maiores odio!
-      </span>
-    </div>
-    <app-comment></app-comment>
-    <app-like></app-like>
-  </mat-card>
-</div>
-<div class="post-card">
-  <mat-card>
-    <div class="post-text">
-      <span>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo quasi repellendus natus perspiciatis hic adipisci fugiat deserunt reiciendis est, consequatur facilis illum similique, maiores odio!
-      </span>
-    </div>
-    <app-comment></app-comment>
-    <app-like></app-like>
-  </mat-card>
-</div>
-<div class="post-card">
-  <mat-card>
-    <div class="post-text">
-      <span>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo quasi repellendus natus perspiciatis hic adipisci fugiat deserunt reiciendis est, consequatur facilis illum similique, maiores odio!
-      </span>
-    </div>
-    <app-comment></app-comment>
-    <app-like></app-like>
-  </mat-card>
-</div>
-<div class="post-card">
-  <mat-card >
-    <div class="post-text">
-      <span>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo quasi repellendus natus perspiciatis hic adipisci fugiat deserunt reiciendis est, consequatur facilis illum similique, maiores odio!
-      </span>
-    </div>
-    <app-comment></app-comment>
-    <app-like></app-like>
-  </mat-card>
-</div>
-<div class="post-card">
-  <mat-card >
-    <div class="post-text">
-      <span>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo quasi repellendus natus perspiciatis hic adipisci fugiat deserunt reiciendis est, consequatur facilis illum similique, maiores odio!
-      </span>
-    </div>
-    <app-comment></app-comment>
-    <app-like></app-like>
-  </mat-card>
-</div>
-<div class="post-card">
-  <mat-card >
-    <div class="post-text">
-      <span>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo quasi repellendus natus perspiciatis hic adipisci fugiat deserunt reiciendis est, consequatur facilis illum similique, maiores odio!
-      </span>
-    </div>
-    <app-comment></app-comment>
-    <app-like></app-like>
-  </mat-card>
-</div>
+

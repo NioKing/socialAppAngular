@@ -1,6 +1,7 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
+import { Post } from 'src/app/interfaces/post.interface';
 import { User } from 'src/app/interfaces/user.interface';
 import { DataService } from '../services/data.service';
 import { CreatePostComponent } from './create-post/create-post.component';
@@ -18,25 +19,27 @@ export class PostComponent implements OnInit, OnDestroy {
   ) { }
 
   clickEventSubscription!: Subscription
-  @Input() user!: User
+  posts$!: Observable<Post[]>
 
   ngOnInit() {
     this.clickEventSubscription = this.dataService.getClickEvent().subscribe(() => {
       this.createPost()
     })
+      this.getPosts()
   }
 
   ngOnDestroy(): void {
     this.clickEventSubscription.unsubscribe()
   }
 
+  getPosts() {
+    this.posts$ = this.dataService.getUserPosts()
+  }  
+
   createPost() {
     this.dialog.open(CreatePostComponent, {
       width: '500px'
     })
-    console.log(this.user.posts)
-    
-
   }
 
 

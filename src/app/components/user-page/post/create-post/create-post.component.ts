@@ -23,7 +23,9 @@ export class CreatePostComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.createPostSubscription.unsubscribe()
+    if(this.createPostSubscription) {
+      this.createPostSubscription.unsubscribe()
+    }
   }
 
   onSubmit() {
