@@ -1,6 +1,6 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Observable, Subscription } from 'rxjs';
+import { mergeMap, Observable, Subscription } from 'rxjs';
 import { Post } from 'src/app/interfaces/post.interface';
 import { User } from 'src/app/interfaces/user.interface';
 import { DataService } from '../services/data.service';

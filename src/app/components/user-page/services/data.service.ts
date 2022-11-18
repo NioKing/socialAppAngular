@@ -30,7 +30,7 @@ export class DataService {
   getUserPosts() {
     return this.apollo.watchQuery<{posts: Post[]}>({
       query: GET_POSTS
-    }).valueChanges.pipe(map((data) => data.data.posts))
+    }).valueChanges.pipe(map((data) => [...data.data.posts].reverse()))
   }
   
   // Add new post

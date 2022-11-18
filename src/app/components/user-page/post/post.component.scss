@@ -6,8 +6,14 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    .creation-date {
+      text-align: left;
+      font-size: 0.8rem;
+      text-decoration: underline;
+    }
     .post-text {
       text-align: center;
+      font-size: 1rem;
     }
   }
 }
